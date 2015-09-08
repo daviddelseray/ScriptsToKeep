@@ -44,7 +44,7 @@ public class ScriptSaveandLoad: MonoBehaviour {
         while (s!=null)
         {
             char[] delimiter = { '/' };
-            string [] result = s.Split(delimiter);
+            string [] result = s.Split(delimiter);// le delimiter est compté comme un simple interval, de ce fait les parties de chaque côté de l'interval sont comptées. Se souvenir de mettre un length -1 ou un Count-1 en cas de parcours de tableau ou liste.
             m_List.Add(result[0]);
 
             foreach (string part in result)
